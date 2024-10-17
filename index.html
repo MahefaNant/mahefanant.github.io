@@ -13,14 +13,30 @@
       margin: 0;
       background-color: #f0f0f0;
     }
+
     h1 {
-      font-size: 5em;
       font-family: Arial, sans-serif;
       color: #333;
+      text-align: center;
+      font-size: 10vw; /* La taille du texte dépend de la largeur de la fenêtre (viewport width) */
+    }
+
+    /* Ajustement pour les grands écrans */
+    @media only screen and (min-width: 1200px) {
+      h1 {
+        font-size: 6vw;
+      }
+    }
+
+    /* Ajustement pour les petits écrans (mobiles) */
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 12vw;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Under Development ... </h1>
+  <h1>Under Development ...</h1>
 </body>
 </html>
