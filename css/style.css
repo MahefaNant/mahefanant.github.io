@@ -8403,12 +8403,20 @@ h1, h2, h3, h4, h5,
 }
 
 .owl-carousel .owl-dots {
-  display: none; /* Cache les points de navigation */
+  pointer-events: auto; /* Cache les points de navigation */
 }
-  .owl-carousel .owl-item {
-    opacity: .4; }
+
+.owl-carousel .owl-item {
+  opacity: .4;
+  pointer-events: none;
+}
+
+.owl-carousel .owl-item .interactive-element {
+  pointer-events: auto; /* Changez .interactive-element par la classe spécifique de vos boutons */
+}
     .owl-carousel .owl-item.active {
-      opacity: 1; }
+      opacity: 1;
+    }
   .owl-carousel .owl-dots {
     text-align: center; }
     .owl-carousel .owl-dots .owl-dot {
