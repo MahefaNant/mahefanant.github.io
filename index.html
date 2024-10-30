@@ -44,7 +44,7 @@
 	        </ul>
 	      </div>
 	    </div>
-	  </nav>
+  	</nav>
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 			  <div class="slider-item ">
@@ -655,7 +655,20 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
 
-  <script src="js/main.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Écoutez les clics sur les liens de navigation
+			$('.navbar-nav .nav-link').on('click', function() {
+				// Fermez le menu si le bouton de navigation est ouvert
+				if ($('.navbar-collapse').hasClass('show')) {
+					$('.navbar-collapse').collapse('hide');
+				}
+			});
+		});
+	</script>
+
+
+	<script src="js/main.js"></script>
     
   </body>
 </html>
