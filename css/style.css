@@ -8395,7 +8395,25 @@ h1, h2, h3, h4, h5,
       display: none; } }
 
 .owl-carousel {
-  position: relative; }
+  position: relative;
+}
+@media (max-width: 768px) { /* Ajustez la largeur selon vos besoins */
+  .owl-carousel .owl-nav {
+    display: none; /* Cache les flèches de navigation */
+  }
+
+  .owl-carousel .owl-dots {
+    display: none; /* Cache les points de navigation */
+  }
+
+  .owl-carousel {
+    pointer-events: none; /* Désactive tous les événements de souris sur le carrousel */
+  }
+
+  .owl-carousel .owl-item {
+    pointer-events: auto; /* Réactive les événements pour les éléments à l'intérieur, si nécessaire */
+  }
+}
   .owl-carousel .owl-item {
     opacity: .4; }
     .owl-carousel .owl-item.active {
